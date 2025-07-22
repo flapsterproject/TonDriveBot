@@ -7,7 +7,7 @@ const kv = await Deno.openKv(); // встроенный KV в Deno
 const TOKEN = Deno.env.get("BOT_TOKEN");
 const SECRET_PATH = "/TonDrive";
 const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`;
-const GAME_URL = "https://tondrive1-1.vercel.app/";
+const GAME_URL = "https://tondrive1-2.vercel.app/";
 
 serve(async (req: Request) => {
   const { pathname } = new URL(req.url);
@@ -50,7 +50,7 @@ serve(async (req: Request) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         chat_id: chatId,
-        photo: "https://tondrive1-1.vercel.app/tondrivephoto.jpg",
+        photo: "https://tondrive1-2.vercel.app/tondrivephoto.jpg",
         caption,
         parse_mode: "Markdown",
         reply_markup: {
